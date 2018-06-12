@@ -6,12 +6,13 @@
     {"name": "radius","value": 180},
     {"name": "radiusRange","value": [0,180]},
 	{"name":"affiliationName","value":"Carnegie Mellon University"},
-	{"name":"affiliationYear","value":"2005"}
+	{"name":"affiliationYear","value":"2005"},
+	{"name":"affiliationName2","value":"Stanford University"}
   ],
   "data": [
     {
       "name": "classification",
-      "url": "https://raw.githubusercontent.com/BioComplex/biocomplex.github.io/master/data/classification_count_range.csv",
+      "url": "data/classification_count_range.csv",
       "format": {
         "type": "csv",
         "parse": {
@@ -35,7 +36,7 @@
       },
 	  "transform": [
         {"type":"filter",
-         "expr":"datum.AuthorAffiliation === affiliationName"
+         "expr":"(datum.AuthorAffiliation === affiliationName) | (datum.AuthorAffiliation === affiliationName2)"
 		},
 		{"type":"filter",
          "expr":"datum.Year === affiliationYear"
@@ -200,7 +201,7 @@
     {
       "fill": "color",
       "orient": "none",
-      "title": "Body style",
+      "title": "Institution",
       "encode": {
         "legend": {
           "update": {"x": {"value": 250},"y": {"value": -200}}
@@ -215,7 +216,7 @@
         "facet": {
           "data": "folded",
           "name": "facet",
-          "groupby": "body-style"
+          "groupby": "AuthorAffiliation"
         }
       },
       "marks": [
@@ -276,7 +277,7 @@
         },
         {
           "type": "line",
-          "from": {"data": "folded"},
+          "from": {"data": "facet"},
           "encode": {
             "enter": {
               "x": {
