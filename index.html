@@ -53,16 +53,8 @@
 
       <script type="text/javascript">
         var spec = "https://raw.githubusercontent.com/BioComplex/biocomplex.github.io/master/affil_radial_static.json";
-        vegaEmbed('#vis', spec, ["embed": {
-                "renderer": "svg",
-                "actions": {
-                "export": false,
-                "source": false,
-                "editor": false
-              }
-        }]).then(function(result) {
-        // access view as result.view
-        }).catch(console.error);
+
+        vegaEmbed('#vis', spec, {"actions":{"export": false, "source": false, "editor":false}}).then(function(result) { // access view as result.view }).catch(console.error);
       </script>      
     </div>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>

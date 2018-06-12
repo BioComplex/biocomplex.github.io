@@ -12,7 +12,7 @@
   "data": [
     {
       "name": "classification",
-      "url": "data/classification_count_range.csv",
+      "url": "https://raw.githubusercontent.com/BioComplex/biocomplex.github.io/master/data/classification_count_range.csv",
       "format": {
         "type": "csv",
         "parse": {
