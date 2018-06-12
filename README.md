@@ -4,8 +4,8 @@
   <!-- Import vega-embed -->
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@3"></script>
 
-# BioComplex website
-## Complex interactions between academic institutions
+## REU2018 - Team 2
+# Complex interactions between academic institutions
 
 <div id="vis"></div>
 
