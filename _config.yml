@@ -1,4 +1,5 @@
 theme: jekyll-theme-tactile
+title: Biocomplex Projects
 host: https://biocomplex.github.io
 webrick:
   headers:
