@@ -1,0 +1,299 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v3.0.json", 
+  "config":{"background":"#ffffff"},
+  "padding": 5,
+  "signals": [
+    {"name": "radius","value": 180},
+    {"name": "radiusRange","value": [0,180]},
+	{"name":"affiliationName","value":"Carnegie Mellon University"},
+	{"name":"affiliationYear","value":"2005"}
+  ],
+  "data": [
+    {
+      "name": "classification",
+      "url": "data/classification_count_range.csv",
+      "format": {
+        "type": "csv",
+        "parse": {
+          "AuthorAffiliation": "string",
+          "Year": "string",
+          "A": "number",
+          "B": "number",
+          "C": "number",
+		  "D": "number",
+		  "E": "number",
+		  "F": "number",
+		  "G": "number",
+		  "H": "number",
+		  "I": "number",
+		  "J": "number",
+		  "K": "number",
+		  "O": "number",
+		  "Total": "number",
+		  "Range": "number"
+        }
+      },
+	  "transform": [
+        {"type":"filter",
+         "expr":"datum.AuthorAffiliation === affiliationName"
+		},
+		{"type":"filter",
+         "expr":"datum.Year === affiliationYear"
+        },
+		{"type":"filter",
+         "expr":"~datum.Year"
+        },
+		{"type":"filter",
+         "expr":"~datum.AuthorAffiliation"
+        }
+		
+	  ]
+    },
+    {
+      "name": "folded",
+      "source": "classification",
+      "transform": [
+        {
+          "type": "fold",
+          "fields": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+			"F",
+			"G",
+			"H",
+			"I",
+			"J",
+			"K",
+			"O"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "fields",
+      "source": "folded",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["key"],
+          "fields": ["value","value"],
+          "ops": ["min","max"]
+        }
+      ]
+    }
+  ],
+  "scales": [
+    {
+      "name": "angle",
+      "type": "point",
+      "range": [6.28,0],
+      "padding": 0.5,
+      "domain": {"data": "fields","field": "key"}
+    },
+    {
+      "name": "color",
+      "type": "ordinal",
+      "domain": {"data": "classification","field": "AuthorAffiliation","sort": true},
+      "range": "category"
+    },
+    {
+      "name": "A",
+      "type": "linear",
+      "range": {"signal": "radiusRange"},
+      "zero": true,
+      "nice": true,
+      "domain": {"data": "classification","field": "Range"}
+    },
+    {
+      "name": "B",
+      "type": "linear",
+      "range": {"signal": "radiusRange"},
+      "zero": true,
+      "nice": true,
+      "domain": {"data": "classification","field": "Range"}
+    },
+    {
+      "name": "C",
+      "type": "linear",
+      "range": {"signal": "radiusRange"},
+      "zero": true,
+      "nice": true,
+      "domain": {"data": "classification","field": "Range"}
+    },
+    {
+      "name": "D",
+      "type": "linear",
+      "range": {"signal": "radiusRange"},
+      "zero": true,
+      "nice": true,
+      "domain": {"data": "classification","field": "Range"}
+    },
+    {
+      "name": "E",
+      "type": "linear",
+      "range": {"signal": "radiusRange"},
+      "zero": true,
+      "nice": true,
+      "domain": {"data": "classification","field": "Range"}
+    },
+	{
+      "name": "F",
+      "type": "linear",
+      "range": {"signal": "radiusRange"},
+      "zero": true,
+      "nice": true,
+      "domain": {"data": "classification","field": "Range"}
+    },
+	{
+      "name": "G",
+      "type": "linear",
+      "range": {"signal": "radiusRange"},
+      "zero": true,
+      "nice": true,
+      "domain": {"data": "classification","field": "Range"}
+    },
+	{
+      "name": "H",
+      "type": "linear",
+      "range": {"signal": "radiusRange"},
+      "zero": true,
+      "nice": true,
+      "domain": {"data": "classification","field": "Range"}
+    },
+	{
+      "name": "I",
+      "type": "linear",
+      "range": {"signal": "radiusRange"},
+      "zero": true,
+      "nice": true,
+      "domain": {"data": "classification","field": "Range"}
+    },
+	{
+      "name": "J",
+      "type": "linear",
+      "range": {"signal": "radiusRange"},
+      "zero": true,
+      "nice": true,
+      "domain": {"data": "classification","field": "Range"}
+    },
+	{
+      "name": "K",
+      "type": "linear",
+      "range": {"signal": "radiusRange"},
+      "zero": true,
+      "nice": true,
+      "domain": {"data": "classification","field": "Range"}
+    },
+	{
+      "name": "O",
+      "type": "linear",
+      "range": {"signal": "radiusRange"},
+      "zero": true,
+      "nice": true,
+      "domain": {"data": "classification","field": "Range"}
+    }
+  ],
+  "legends": [
+    {
+      "fill": "color",
+      "orient": "none",
+      "title": "Body style",
+      "encode": {
+        "legend": {
+          "update": {"x": {"value": 250},"y": {"value": -200}}
+        }
+      }
+    }
+  ],
+  "marks": [
+    {
+      "type": "group",
+      "from": {
+        "facet": {
+          "data": "folded",
+          "name": "facet",
+          "groupby": "body-style"
+        }
+      },
+      "marks": [
+        {
+          "name": "grid",
+          "from": {"data": "fields"},
+          "type": "rule",
+          "encode": {
+            "update": {
+              "x": {
+                "signal": "1 * radius * cos(scale('angle', datum.key))"
+              },
+              "y": {
+                "signal": "1 * radius * sin(scale('angle', datum.key))"
+              },
+              "x2": {"value": 0},
+              "y2": {"value": 0},
+              "stroke": {"value": "#ccc"}
+            }
+          }
+        },
+        {
+          "name": "label",
+          "from": {"data": "fields"},
+          "type": "text",
+          "encode": {
+            "update": {
+              "x": {
+                "signal": "1.2 * radius * cos(scale('angle', datum.key))"
+              },
+              "y": {
+                "signal": "1.2 * radius * sin(scale('angle', datum.key))"
+              },
+              "baseline": {"value": "bottom"},
+              "text": {"field": "key"},
+              "align": {"value": "center"}
+            }
+          }
+        },
+        {
+          "name": "scale",
+          "from": {"data": "fields"},
+          "type": "text",
+          "encode": {
+            "update": {
+              "x": {
+                "signal": "1.2 * radius * cos(scale('angle', datum.key))"
+              },
+              "y": {
+                "signal": "1.2 * radius * sin(scale('angle', datum.key))"
+              },
+              "baseline": {"value": "top"},
+              "text": {"signal": "'' + format(datum.max_value, '.2f')"},
+              "align": {"value": "center"},
+              "fill": {"value": "#888"}
+            }
+          }
+        },
+        {
+          "type": "line",
+          "from": {"data": "folded"},
+          "encode": {
+            "enter": {
+              "x": {
+                "signal": "scale(datum.key, datum.value) * cos(scale('angle', datum.key))"
+              },
+              "y": {
+                "signal": "scale(datum.key, datum.value) * sin(scale('angle', datum.key))"
+              },
+              "stroke": {"scale": "color","field": "AuthorAffiliation"},
+              "strokeWidth": {"value": 2},
+              "interpolate": {"value": "linear-closed"},
+			  "fill":{"scale": "color","field": "AuthorAffiliation"},
+			  "fillOpacity":{"value":0.15}
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
