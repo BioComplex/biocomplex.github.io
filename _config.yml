@@ -2,5 +2,5 @@ theme: jekyll-theme-tactile
 host: https://biocomplex.github.io
 webrick:
   headers:
-    My-Header: My-Value
+    biocomplex.github.io: Projects page
     My-Other-Header: My-Other-Value
