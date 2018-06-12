@@ -10,7 +10,7 @@
 <div id="vis"></div>
 
 <script type="text/javascript">
-  var spec = "https://raw.githubusercontent.com/vega/vega/master/docs/examples/bar-chart.vg.json";
+  var spec = "/affil_radial_static.json";
   vegaEmbed('#vis', spec).then(function(result) {
     // access view as result.view
   }).catch(console.error);
