@@ -1,2 +1,2 @@
-# biocomplex.github.io
-BioComplex website
+# BioComplex website
+## Complex interactions between academic institutions
