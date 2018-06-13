@@ -1,7 +1,6 @@
 theme: jekyll-theme-tactile
-title: Biocomplex Projects
+title: Biocomplex Lab Projects
 host: https://biocomplex.github.io
 webrick:
   headers:
-    biocomplex.github.io: Projects page
-    My-Other-Header: My-Other-Value
+    biocomplex.github.io: Projects
