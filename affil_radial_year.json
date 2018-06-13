@@ -5,18 +5,15 @@
   "signals": [
     {"name": "radius","value": 180},
     {"name": "radiusRange","value": [0,180]},
-	{"name":"affiliationName","value":"Carnegie Mellon University"},
-	{"name":"affiliationYear","value":"2005"},
-	{"name":"affiliationName2","value":"Stanford University"}
+	{"name":"affiliationYear","value":"2005"}
   ],
   "data": [
     {
       "name": "classification",
-      "url": "data/classification_count_range.csv",
+      "url": "data/classification_year.csv",
       "format": {
         "type": "csv",
         "parse": {
-          "AuthorAffiliation": "string",
           "Year": "string",
           "A": "number",
           "B": "number",
@@ -34,17 +31,11 @@
         }
       },
 	  "transform": [
-        {"type":"filter",
-         "expr":"(datum.AuthorAffiliation === affiliationName) | (datum.AuthorAffiliation === affiliationName2)"
-		},
 		{"type":"filter",
          "expr":"datum.Year === affiliationYear"
         },
 		{"type":"filter",
          "expr":"~datum.Year"
-        },
-		{"type":"filter",
-         "expr":"~datum.AuthorAffiliation"
         }
 		
 	  ]
@@ -95,7 +86,7 @@
     {
       "name": "color",
       "type": "ordinal",
-      "domain": {"data": "classification","field": "AuthorAffiliation","sort": true},
+      "domain": {"data": "classification","field": "Year","sort": true},
       "range": "category"
     },
     {
@@ -206,7 +197,7 @@
         "facet": {
           "data": "folded",
           "name": "facet",
-          "groupby": "AuthorAffiliation"
+          "groupby": "Year"
         }
       },
       "marks": [
@@ -276,10 +267,10 @@
               "y": {
                 "signal": "scale(datum.key, datum.value) * sin(scale('angle', datum.key))"
               },
-              "stroke": {"scale": "color","field": "AuthorAffiliation"},
+              "stroke": {"scale": "color","field": "Year"},
               "strokeWidth": {"value": 2},
               "interpolate": {"value": "linear-closed"},
-			  "fill":{"scale": "color","field": "AuthorAffiliation"},
+			  "fill":{"scale": "color","field": "Year"},
 			  "fillOpacity":{"value":0.15}
             }
           }
