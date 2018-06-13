@@ -6,23 +6,29 @@ title: REU2018 - Team 2
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@2"></script>
   <!-- Import vega-embed -->
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@3"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
   <link rel="stylesheet" href="/css/style.css">
 
-## REU2018 - Team 2
-# Complex interactions between academic institutions
+# REU2018 - Team 2
+## Complex interactions between academic institutions
 
 <div class="slidecontainer">
-  <input type="range" min="1960" max="2010" value="2005" class="slider" id="myRange">
+  <input type="range" min="1960" max="2010" value="1995" class="slider" id="yearRange">
 </div>
+<p>Year: <span id="selectedYear"></span></p>
 
 <div id="vis">
-	<div class="slidecontainer">
-  <input type="range" min="1960" max="2010" value="2005" class="slider" id="myRange">
-</div>
 </div>
 
 <script type="text/javascript">
+	$('#selectedYear').text($('#yearRange').val());
+	$('#yearRange').on('input propertychange', function (){
+		$('#selectedYear').text(
+			$('#yearRange').val()
+			)
+	});
+	// vega visualization
   var spec = "/affil_radial_static.json";
   vegaEmbed('#vis', spec, {
                 "renderer": "svg",
