@@ -45,7 +45,7 @@ title: REU2018 - Team 2
   </div>
   
   var spec2 = "/affil_radial_year.json";
-  vegaEmbed('#vis2', spec, {
+  vegaEmbed('#vis2', spec2, {
                 "renderer": "svg",
                 "actions": {
                 "export": false,
