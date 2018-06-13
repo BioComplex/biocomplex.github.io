@@ -23,14 +23,11 @@ title: REU2018 - Team 2
 </div>
 
 <script type="text/javascript">
-	$('#selectedYear').text($('#yearRange').val());
-	$('#yearRange').on('input propertychange', function (){
-		$('#selectedYear').text(
-			$('#yearRange').val()
-			)
-	});
-	// vega visualization
-  var spec = "/affil_radial_static.json";
+  // get local json
+  var json = $.getJSON({"url":"/affil_radial_static.json",'async': false});
+  var spec = JSON.parse(json.responseText);
+
+  // renders the initial plot
   vegaEmbed('#vis', spec, {
                 "renderer": "svg",
                 "actions": {
@@ -38,6 +35,35 @@ title: REU2018 - Team 2
                 "source": false,
                 "editor": false
               } }).then(function(result) {
+
+
+              }).catch(console.error);
+	
+  // selected year functionality
+   $('#selectedYear').text($('#yearRange').val());
+                $('#yearRange').on('input propertychange', function (){
+                  $('#selectedYear').text(
+                  $('#yearRange').val()
+                ),
+                  // when the year changes, redraw the entire plot
+            spec.signals[3].value = $('#yearRange').val();
+               vegaEmbed('#vis', spec, {
+                "renderer": "svg",
+                "actions": {
+                "export": false,
+                "source": false,
+                "editor": false
+              } }).then(function(result) {
+
+
+              }).catch(console.error);
+            
+  });
+
+
+	
+
+	// JSON change functionality
+
     // access view as result.view
-  }).catch(console.error);
 </script>
