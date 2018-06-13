@@ -6,13 +6,13 @@
     {"name": "radius","value": 180},
     {"name": "radiusRange","value": [0,180]},
 	{"name":"affiliationName","value":"Carnegie Mellon University"},
-	{"name":"affiliationYear","value":"1992"},
+	{"name":"affiliationYear","value":"2005"},
 	{"name":"affiliationName2","value":"Stanford University"}
   ],
   "data": [
     {
       "name": "classification",
-      "url": "https://raw.githubusercontent.com/BioComplex/biocomplex.github.io/master/data/classification_count_range.csv",
+      "url": "data/classification_count_range.csv",
       "format": {
         "type": "csv",
         "parse": {
@@ -29,7 +29,6 @@
 		  "I": "number",
 		  "J": "number",
 		  "K": "number",
-		  "O": "number",
 		  "Total": "number",
 		  "Range": "number"
         }
@@ -67,8 +66,7 @@
 			"H",
 			"I",
 			"J",
-			"K",
-			"O"
+			"K"
           ]
         }
       ]
@@ -182,14 +180,6 @@
     },
 	{
       "name": "K",
-      "type": "linear",
-      "range": {"signal": "radiusRange"},
-      "zero": true,
-      "nice": true,
-      "domain": {"data": "classification","field": "Range"}
-    },
-	{
-      "name": "O",
       "type": "linear",
       "range": {"signal": "radiusRange"},
       "zero": true,
