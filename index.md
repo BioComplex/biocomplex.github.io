@@ -40,15 +40,6 @@ title: REU2018 - Team 2
               } }).then(function(result) {
     // access view as result.view
   }).catch(console.error);
-	
-var spec2 = "/affil_radial_year.json";
-  vegaEmbed('#vis', spec2, {
-                "renderer": "svg",
-                "actions": {
-                "export": false,
-                "source": false,
-                "editor": false
-              } }).then(function(result) {
-    // access view as result.view
-  }).catch(console.error);
+
+  
 </script>
