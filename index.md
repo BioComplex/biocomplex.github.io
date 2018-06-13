@@ -22,6 +22,9 @@ title: REU2018 - Team 2
 <div id="vis">
 </div>
 
+<div id="vis2">
+</div>
+
 <script type="text/javascript">
 	$('#selectedYear').text($('#yearRange').val());
 	$('#yearRange').on('input propertychange', function (){
@@ -40,9 +43,6 @@ title: REU2018 - Team 2
               } }).then(function(result) {
     // access view as result.view
   }).catch(console.error);
-
-  <div id="vis2">
-  </div>
   
   var spec2 = "/affil_radial_year.json";
   vegaEmbed('#vis2', spec2, {
