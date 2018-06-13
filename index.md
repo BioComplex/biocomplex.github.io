@@ -1,4 +1,5 @@
 ---
+layout: home
 title: REU2018 - Team 2
 ---
  <!-- Import Vega 3 & Vega-Lite 2 (does not have to be from CDN) -->
@@ -14,9 +15,9 @@ title: REU2018 - Team 2
 ## Complex interactions between academic institutions
 
 <div class="slidecontainer">
+	<p>Year: <span id="selectedYear"></span></p>
   <input type="range" min="1960" max="2010" value="1995" class="slider" id="yearRange">
 </div>
-<p>Year: <span id="selectedYear"></span></p>
 
 <div id="vis">
 </div>
