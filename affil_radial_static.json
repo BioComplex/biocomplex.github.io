@@ -1,18 +1,19 @@
 {
-  "$schema": "https://vega.github.io/schema/vega/v3.0.json", 
+  "$schema": "https://vega.github.io/schema/vega/v3.json", 
   "config":{"background":"#ffffff"},
   "padding": 5,
   "signals": [
     {"name": "radius","value": 180},
     {"name": "radiusRange","value": [0,180]},
-	{"name":"affiliationName","value":"Carnegie Mellon University"},
-	{"name":"affiliationYear","value":"2005"},
-	{"name":"affiliationName2","value":"Stanford University"}
+    {"name":"affiliationYear","value":"2005"},
+	{"name":"affiliation1","value":"University of Toronto"},
+	{"name":"affiliation2","value":""},
+  {"name":"affiliation3","value":""}
   ],
   "data": [
     {
       "name": "classification",
-      "url": "data/classification_count_range.csv",
+      "url": "https://raw.githubusercontent.com/BioComplex/biocomplex.github.io/master/data/classification_count_range.csv",
       "format": {
         "type": "csv",
         "parse": {
@@ -34,9 +35,9 @@
         }
       },
 	  "transform": [
-        {"type":"filter",
-         "expr":"(datum.AuthorAffiliation === affiliationName) | (datum.AuthorAffiliation === affiliationName2)"
-		},
+    {"type":"filter",
+         "expr": "(datum.AuthorAffiliation === affiliation1 | datum.AuthorAffiliation === affiliation2 | datum.AuthorAffiliation === affiliation3)"
+        },
 		{"type":"filter",
          "expr":"datum.Year === affiliationYear"
         },
@@ -194,7 +195,7 @@
       "title": "Institution",
       "encode": {
         "legend": {
-          "update": {"x": {"value": 250},"y": {"value": -200}}
+          "update": {"x": {"value": 200},"y": {"value": -200}}
         }
       }
     }

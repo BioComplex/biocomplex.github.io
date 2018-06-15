@@ -182,10 +182,10 @@
     {
       "fill": "color",
       "orient": "none",
-      "title": "Institution",
+      "title": "Year",
       "encode": {
         "legend": {
-          "update": {"x": {"value": 250},"y": {"value": -200}}
+          "update": {"x": {"value": 170},"y": {"value": -200}}
         }
       }
     }
