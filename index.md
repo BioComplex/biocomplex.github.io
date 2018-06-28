@@ -32,10 +32,29 @@ title: REU2018 - Team 2
       <p>Year: <span id="selectedYear"></span></p>
     </div>
     <div class="row">
-        <div class="col-xs-7" id="id-afill"></div>
-        <div class="col-xs-3" id="id-year"></div>
+        <div class="col-lg-6 col-md-12 col-sm-24" id="id-afill"></div>
+        <div class="col-lg-6 col-md-12 col-sm-24" id="id-year"></div>
     </div>
+    <h2  class='invisible' id="titleACMclass" alt="Click to visit the ACM website"><a href="https://www.acm.org/publications/computing-classification-system/1998" target="_blank">ACM Classes</a> </h2>
+  <br>
+  <div class="invisible" id="acm-classes">
+    <div class="wrapper">
+      <div><span class="label label-default">A. General Literature</span></div>
+      <div><span class="label label-info">B. Hardware</span></div>
+      <div></div>
+      <div><span class="label label-info">C. Computer Systems Organization</span></div>
+      <div><span class="label label-default">D. Software</span></div>
+      <div><span class="label label-info">E. Data</span></div>
+      <div><span class="label label-default">F. Theory of Computation</span></div>
+      <div><span class="label label-info">G. Mathematics of Computing</span></div>
+      <div><span class="label label-default">H. Information Systems</span></div>
+      <div><span class="label label-info">I. Computing Methodologies</span></div>
+      <div><span class="label label-default">J. Computer Applications</span></div>
+      <div><span class="label label-info">K. Computing Milieux</span></div>
+    </div>
+  </div>
 </div>
+
 
 <script type="text/javascript">
   var opts = {"renderer": "svg", "actions": {"export": false,"source": false,"editor": false } }
@@ -124,6 +143,9 @@ title: REU2018 - Team 2
       jplt1.signals[3].value = defaultSchool;
       //updates the plot
       updatePlot(jplt1,'#id-afill',opts);
+      $('#titleACMclass').show();
+      $('#acm-classes').removeClass();
+      $('#titleACMclass').removeClass();
     });
 
   // on year slide change

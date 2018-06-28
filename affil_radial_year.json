@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega/v3.0.json", 
   "config":{"background":"#ffffff"},
-  "padding": 5,
+  "padding": 52,
   "signals": [
     {"name": "radius","value": 180},
     {"name": "radiusRange","value": [0,180]},
@@ -185,7 +185,17 @@
       "title": "Year",
       "encode": {
         "legend": {
-          "update": {"x": {"value": 170},"y": {"value": -200}}
+          "update": {"x": {"value": 150},"y": {"value": -220}}
+        },
+        "title": {
+          "update": {
+            "fontSize": {"value": 14}
+          }
+        },
+        "labels": {
+          "update" : {
+            "fontSize": {"value": 12}
+          }
         }
       }
     }
@@ -232,6 +242,7 @@
                 "signal": "1.2 * radius * sin(scale('angle', datum.key))"
               },
               "baseline": {"value": "bottom"},
+              "fontSize" : {"value": "20"},
               "text": {"field": "key"},
               "align": {"value": "center"}
             }
@@ -250,8 +261,9 @@
                 "signal": "1.2 * radius * sin(scale('angle', datum.key))"
               },
               "baseline": {"value": "top"},
-              "text": {"signal": "'' + format(datum.max_value, '.2f')"},
+              "text": {"signal": "'' + format(datum.max_value, '0')"},
               "align": {"value": "center"},
+              "fontSize" : {"value": "15"},
               "fill": {"value": "#888"}
             }
           }

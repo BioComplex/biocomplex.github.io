@@ -36,3 +36,17 @@
     background: #4CAF50; /* Green background */
     cursor: pointer; /* Cursor on hover */
 }
+
+.title {
+    text-align: center;
+}
+
+#acm-classes span{
+    font-size: 18px;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 15px;
+}

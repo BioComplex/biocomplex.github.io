@@ -1,13 +1,13 @@
 {
   "$schema": "https://vega.github.io/schema/vega/v3.json", 
   "config":{"background":"#ffffff"},
-  "padding": 5,
+  "padding": 52,
   "signals": [
     {"name": "radius","value": 180},
     {"name": "radiusRange","value": [0,180]},
     {"name":"affiliationYear","value":"2005"},
-	{"name":"affiliation1","value":"University of Toronto"},
-	{"name":"affiliation2","value":""},
+  {"name":"affiliation1","value":"University of Toronto"},
+  {"name":"affiliation2","value":""},
   {"name":"affiliation3","value":""}
   ],
   "data": [
@@ -22,33 +22,33 @@
           "A": "number",
           "B": "number",
           "C": "number",
-		  "D": "number",
-		  "E": "number",
-		  "F": "number",
-		  "G": "number",
-		  "H": "number",
-		  "I": "number",
-		  "J": "number",
-		  "K": "number",
-		  "Total": "number",
-		  "Range": "number"
+      "D": "number",
+      "E": "number",
+      "F": "number",
+      "G": "number",
+      "H": "number",
+      "I": "number",
+      "J": "number",
+      "K": "number",
+      "Total": "number",
+      "Range": "number"
         }
       },
-	  "transform": [
+    "transform": [
     {"type":"filter",
          "expr": "(datum.AuthorAffiliation === affiliation1 | datum.AuthorAffiliation === affiliation2 | datum.AuthorAffiliation === affiliation3)"
         },
-		{"type":"filter",
+    {"type":"filter",
          "expr":"datum.Year === affiliationYear"
         },
-		{"type":"filter",
+    {"type":"filter",
          "expr":"~datum.Year"
         },
-		{"type":"filter",
+    {"type":"filter",
          "expr":"~datum.AuthorAffiliation"
         }
-		
-	  ]
+    
+    ]
     },
     {
       "name": "folded",
@@ -62,12 +62,12 @@
             "C",
             "D",
             "E",
-			"F",
-			"G",
-			"H",
-			"I",
-			"J",
-			"K"
+      "F",
+      "G",
+      "H",
+      "I",
+      "J",
+      "K"
           ]
         }
       ]
@@ -90,7 +90,7 @@
       "name": "angle",
       "type": "point",
       "range": [6.28,0],
-      "padding": 0.5,
+      "padding": 0.8,
       "domain": {"data": "fields","field": "key"}
     },
     {
@@ -139,7 +139,7 @@
       "nice": true,
       "domain": {"data": "classification","field": "Range"}
     },
-	{
+  {
       "name": "F",
       "type": "linear",
       "range": {"signal": "radiusRange"},
@@ -147,7 +147,7 @@
       "nice": true,
       "domain": {"data": "classification","field": "Range"}
     },
-	{
+  {
       "name": "G",
       "type": "linear",
       "range": {"signal": "radiusRange"},
@@ -155,7 +155,7 @@
       "nice": true,
       "domain": {"data": "classification","field": "Range"}
     },
-	{
+  {
       "name": "H",
       "type": "linear",
       "range": {"signal": "radiusRange"},
@@ -163,7 +163,7 @@
       "nice": true,
       "domain": {"data": "classification","field": "Range"}
     },
-	{
+  {
       "name": "I",
       "type": "linear",
       "range": {"signal": "radiusRange"},
@@ -171,7 +171,7 @@
       "nice": true,
       "domain": {"data": "classification","field": "Range"}
     },
-	{
+  {
       "name": "J",
       "type": "linear",
       "range": {"signal": "radiusRange"},
@@ -179,7 +179,7 @@
       "nice": true,
       "domain": {"data": "classification","field": "Range"}
     },
-	{
+  {
       "name": "K",
       "type": "linear",
       "range": {"signal": "radiusRange"},
@@ -195,10 +195,23 @@
       "title": "Institution",
       "encode": {
         "legend": {
-          "update": {"x": {"value": 200},"y": {"value": -200}}
+          "update": {
+            "x": {"value": 150},
+            "y": {"value": -220}
+          }
+        },
+        "title": {
+        "update": {
+          "fontSize": {"value": 14}
+        }
+      },
+      "labels": {
+        "update" : {
+          "fontSize": {"value": 12}
         }
       }
     }
+  }
   ],
   "marks": [
     {
@@ -243,6 +256,7 @@
               },
               "baseline": {"value": "bottom"},
               "text": {"field": "key"},
+              "fontSize" : {"value": "20"},
               "align": {"value": "center"}
             }
           }
@@ -260,8 +274,9 @@
                 "signal": "1.2 * radius * sin(scale('angle', datum.key))"
               },
               "baseline": {"value": "top"},
-              "text": {"signal": "'' + format(datum.max_value, '.2f')"},
+              "text": {"signal": "'' + format(datum.max_value, '0')"},
               "align": {"value": "center"},
+              "fontSize" : {"value": "15"},
               "fill": {"value": "#888"}
             }
           }
@@ -280,8 +295,8 @@
               "stroke": {"scale": "color","field": "AuthorAffiliation"},
               "strokeWidth": {"value": 2},
               "interpolate": {"value": "linear-closed"},
-			  "fill":{"scale": "color","field": "AuthorAffiliation"},
-			  "fillOpacity":{"value":0.15}
+        "fill":{"scale": "color","field": "AuthorAffiliation"},
+        "fillOpacity":{"value":0.15}
             }
           }
         }
