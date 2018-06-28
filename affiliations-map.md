@@ -53,7 +53,7 @@ $('#tokyo').click(function(){
 });
 
 $('#world').click(function(){
-	map.setView(L.latLng(35.652, 139.835), 12);
+	map.setView(L.latLng(0.0, 0.0), 2);
 });
 
 L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
