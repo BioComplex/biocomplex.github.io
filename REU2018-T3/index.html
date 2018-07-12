@@ -1,2 +1,23 @@
 <html>
+    <head>
+        <title> Business Recommender </title>
+        <link rel="icon" type="image/png" href="icon.png"></link>
+        <link rel="stylesheet" type="text/css" href="styles.css"></link>
+    </head>
+    <body>
+        <div class="content">
+            <a href="index.html" class="home"><h1> Recommend a Business to Me! </h1></a>
+            <a href="about.html" class="about"><h2> About </h2></a>
+            <input id="inputToCheck" onkeyup="searchBusinessList()" type="search" placeholder="your favorite business" autofocus></input>
+            <button onclick="addToFavoritesList()"><h3 id="output"></h3></button>
+            <ul id="myUl">
+            </ul>
+            <br />
+            <br />
+            <button onclick="findMatch()" class="recommendButton">Recommend!</button>
+            <ul id="myUl2">
+            </ul>
+        </div>
+        <script src="scripts.js"></script>
+    </body>
 </html>

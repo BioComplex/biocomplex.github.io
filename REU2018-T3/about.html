@@ -1,0 +1,26 @@
+<html>
+        <head>
+            <title> Business Recommender </title>
+            <link rel="stylesheet" type="text/css" href="styles.css"></link>
+            <link rel="icon" type="image/png" href="icon.png"></link>
+        </head>
+        <body>
+            <div class="content">
+                <a href="index.html" class="home"><h1> Recommend a Business to Me! </h1></a>
+                <a href="about.html" class="about"><h2> About </h2></a>
+                <p class="morePadding"> One way to create a network between the businesses in the Yelp dataset was to look at the sequences of businesses that users reviewed. 
+                    To create our weighted network, we organized each user's reviews by their timestamps. Each business became a node, and each pair of businesses that a user reviewed in sequence became an edge. 
+                </p>   
+                <p>To illustrate this process, imagine that businesses A, B, and C exist. A first user reviews A, then B, then C. As a result, an edge is drawn between (A, B) and between (B, C). A second users reviews B, then C, then A. 
+                    Now, the edges (B, C) and (C, A) are added to the weighted network.
+                </p>       
+                <p>This kind of network is helpful because, if a user rates business A well, the business with the highest weight could be recommended to the user. For example, 
+                    the edge between business B and business A might have a weight of 120, meaning that 120 users rated business A and then business B, or vice versa. 
+                    Therefore, business B would be recommended to a user who liked business A.
+                </p>        
+                <p>This kind of network could be helpful in a cold start situation where very little is known about the user. 
+                    It would be most helpful in a situation where there is an abundance of data, as networks with low edge weights might not be as effective in producing quality recommendations.
+                </p>
+            </div>
+        </body>
+    </html>

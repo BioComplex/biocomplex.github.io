@@ -1,0 +1,155 @@
+/*
+Theme 1:
+    Background: 699599
+    Color: FFDE00
+
+Theme 2:
+    Background: 528354
+    Color: 000000
+*/
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #75B06C;
+    color: #FFFFFF;
+    padding-top: 70px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.content {
+    max-width: 1000;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    font-weight: bolder;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-weight: lighter;
+    text-align: right;
+    margin-top: -33px;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+.about:hover {
+    text-decoration: underline;
+}
+
+h3 {
+    font-weight: lighter;
+}
+
+button {
+    background-color: #75B06C;
+    color: #FFFFFF;
+    font-size: 15px;
+    border: 0px;
+}
+
+button:hover {
+    text-decoration: underline;
+}
+
+button:focus {
+    outline: 0px;
+}
+
+a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+input {
+    border-top-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-bottom-color: #FFFFFF;
+    margin-top: 125px;
+    height: 100px;
+    width: 100%;
+    background-color: #75B06C;
+    padding-bottom: 30px;
+
+    /* Copy to Input Placeholder Text */
+    font-size: 80px;
+    color: #FFFFFF;
+    font-weight: lighter;
+    margin-top: 150px;
+    line-height: normal;
+}
+
+input:focus {
+    outline-width: 0px;
+}
+
+/* Input Placeholder Text */
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    font-size: 80px;
+    color: #FFFFFF;
+    font-weight: lighter;
+    margin-top: 150px;
+    line-height: normal;
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+    font-size: 80px;
+    color: #FFFFFF;
+    font-weight: lighter;
+    margin-top: 150px;
+    line-height: normal;
+  }
+  :-ms-input-placeholder { /* IE 10+ */
+    font-size: 80px;
+    color: #FFFFFF;
+    font-weight: lighter;
+    margin-top: 150px;
+    line-height: normal;
+  }
+  :-moz-placeholder { /* Firefox 18- */
+    font-size: 80px;
+    color: #FFFFFF;
+    font-weight: lighter;
+    margin-top: 150px;
+    line-height: normal;
+  }
+
+
+ul {
+    padding-left: 6px;
+    list-style-type: disc;
+    list-style-position: inside;
+    list-style-image: url('food.png');
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+li {
+    float: left;
+    margin-right: 35px;
+}
+
+.recommendButton {
+    border: 1px solid #FFFFFF;
+    border-radius: 10px;
+    background-color: #75B06C;
+    color: #FFFFFF;
+    font-weight: lighter;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.recommendButton:hover {
+    text-decoration: none;
+    background-color: #FFFFFF;
+    color: #75B06C;
+}
+
+
+.morePadding {
+    margin-top: 70px;
+}
