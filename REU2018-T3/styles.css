@@ -153,3 +153,11 @@ li {
 .morePadding {
     margin-top: 70px;
 }
+
+.refA {
+    text-decoration: underline;
+}
+
+.refA:hover {
+    text-decoration: none;
+}
