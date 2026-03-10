@@ -730,22 +730,31 @@ img { display: block; max-width: 100%; }
 
 .academic-card .academic-links {
     display: flex;
-    gap: 0.75rem;
+    gap: 1rem;
     flex-wrap: wrap;
+    align-items: center;
+    margin-top: 0.25rem;
 }
 
 .academic-card .academic-links a {
-    font-size: 0.75rem;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--charcoal);
-    border-bottom: 1.5px solid var(--pink);
-    padding-bottom: 1px;
-    transition: color 0.2s;
+    display: inline-flex;
+    align-items: center;
+    transition: opacity 0.2s;
 }
 
-.academic-card .academic-links a:hover { color: var(--pink); }
+.academic-card .academic-links a img {
+    width: 22px;
+    height: 22px;
+    display: block;
+    filter: brightness(0) saturate(100%) invert(13%) sepia(6%) saturate(541%) hue-rotate(278deg) brightness(96%) contrast(91%);
+    opacity: 0.75;
+    transition: filter 0.2s, opacity 0.2s;
+}
+
+.academic-card .academic-links a:hover img {
+    filter: invert(27%) sepia(80%) saturate(1800%) hue-rotate(315deg) brightness(90%) contrast(95%);
+    opacity: 1;
+}
 
 .pi-card .pi-links { margin-top: 1.5rem; display: flex; gap: 1rem; flex-wrap: wrap; }
 
