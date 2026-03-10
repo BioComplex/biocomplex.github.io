@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research — BioComplex Lab</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+    <nav>
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="index.html"><img src="Images/logo.png" alt="BioComplex Lab"></a>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html"         class="nav-link">Home</a></li>
+                <li><a href="research.html"       class="nav-link active">Research</a></li>
+                <li><a href="latest-news.html"    class="nav-link">Latest News</a></li>
+                <li><a href="collaborators.html"  class="nav-link">Collaborators</a></li>
+                <li><a href="projects.html"       class="nav-link">Projects</a></li>
+                <li><a href="about-us.html"       class="nav-link">About Us</a></li>
+                <li><a href="join-the-lab.html"   class="nav-cta">Join the Lab</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<div class="page-header">
+    <div class="section-inner">
+        <h1>Our <em>Research</em></h1>
+        <p>Exploring complexity through networks, computation, and data.</p>
+    </div>
+</div>
+
+<!-- ── THEMES ── -->
+<section class="section section-tint">
+    <div class="section-inner fade-in">
+        <span class="section-label">Research Themes</span>
+        <h2 class="section-heading">Three pillars of <em>our work</em></h2>
+        <div class="research-cards">
+            <div class="research-card">
+                <div class="research-card-icon"><img src="Images/icons/hexagon-nodes-solid.png" alt="Network Science icon"></div>
+                <h3>Network Science</h3>
+                <p>We build and analyse complex networks across social, urban, and informational
+                   systems to understand how their structure shapes dynamics, robustness, and
+                   emergent behaviour at multiple scales.</p>
+            </div>
+            <div class="research-card">
+                <div class="research-card-icon"><img src="Images/icons/code-compare-solid.png" alt="Computational Modelling icon"></div>
+                <h3>Computational Modelling</h3>
+                <p>We develop agent-based, optimisation, and biologically inspired computational
+                   models to simulate and predict complex system dynamics — from crime patterns
+                   and misinformation spread to urban inequality and human mobility.</p>
+            </div>
+            <div class="research-card">
+                <div class="research-card-icon"><img src="Images/icons/chart-line-solid.png" alt="Data-Driven Discovery icon"></div>
+                <h3>Data-Driven Discovery</h3>
+                <p>We apply machine learning, statistical inference, and AI-driven analysis to
+                   large-scale datasets, uncovering hidden patterns and emergent properties that
+                   support evidence-based understanding of complex social and urban systems.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── FOCUS AREAS ── -->
+<section class="section section-white">
+    <div class="section-inner fade-in">
+        <span class="section-label">Current Focus</span>
+        <h2 class="section-heading">Questions driving <em>our science</em></h2>
+
+        <div class="two-col mt-lg">
+            <div>
+                <h3 style="font-family:'Fraunces',serif; font-size:1.4rem; font-weight:700; margin-bottom:0.75rem; color:var(--charcoal);">
+                    How does network topology shape resilience?
+                </h3>
+                <p style="color:var(--gray); line-height:1.8; font-size:0.95rem;">
+                    Placeholder description of this research question. Replace with the lab's
+                    actual focus area, specific organisms or systems studied, and key methods.
+                </p>
+            </div>
+            <div class="col-blob">Placeholder Image</div>
+        </div>
+
+        <div class="two-col reverse mt-lg">
+            <div>
+                <h3 style="font-family:'Fraunces',serif; font-size:1.4rem; font-weight:700; margin-bottom:0.75rem; color:var(--charcoal);">
+                    What drives emergent dynamics in biological systems?
+                </h3>
+                <p style="color:var(--gray); line-height:1.8; font-size:0.95rem;">
+                    Placeholder description of this research question. Replace with the lab's
+                    actual focus area, specific organisms or systems studied, and key methods.
+                </p>
+            </div>
+            <div class="col-blob">Placeholder Image</div>
+        </div>
+    </div>
+</section>
+
+<!-- ── PUBLICATIONS ── -->
+<section class="section section-tint">
+    <div class="section-inner fade-in">
+        <span class="section-label">Publications</span>
+        <h2 class="section-heading">Selected <em>publications</em></h2>
+
+        <!-- Stats bar — populated by JS -->
+        <div id="pub-stats" class="pub-stats-bar mt-md"></div>
+
+        <!-- Publication list — populated by JS -->
+        <div id="pub-container">
+            <div class="pub-loading">
+                <div class="pub-spinner"></div>
+                <span>Loading publications…</span>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <img src="Images/logo.png" alt="BioComplex Lab">
+    <span>© 2026 BioComplex Lab, University of Exeter</span>
+    <div class="footer-social">
+        <a href="#" aria-label="LinkedIn"><img src="Images/icons/square-linkedin-brands-solid.png" alt="LinkedIn"></a>
+        <a href="#" aria-label="BlueSky"><img src="Images/icons/square-bluesky-brands-solid.png" alt="BlueSky"></a>
+    </div>
+</footer>
+
+<script>
+    const toggle = document.querySelector('.nav-toggle');
+    const menu   = document.querySelector('.nav-menu');
+    toggle.addEventListener('click', () => {
+        const open = menu.classList.toggle('nav-open');
+        toggle.setAttribute('aria-expanded', open);
+    });
+    const observer = new IntersectionObserver(
+        entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
+        { threshold: 0.08 }
+    );
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+
+<script>
+/* ── Publications loader ──────────────────────────────────────────────────
+   Reads data/members.json to get feed URLs, fetches each member's stats.json
+   in parallel, merges + deduplicates by DOI, then shows the two most recent
+   years only (current year = most recent paper found across all feeds).
+   To add a member: edit data/members.json only — no HTML change needed.
+   ──────────────────────────────────────────────────────────────────────── */
+(async function () {
+    const container = document.getElementById('pub-container');
+    const statsEl   = document.getElementById('pub-stats');
+
+    try {
+        /* 1 ── Load members config */
+        const membersRes = await fetch('data/members.json');
+        if (!membersRes.ok) throw new Error('Cannot load members.json');
+        const { members } = await membersRes.json();
+
+        /* 2 ── Fetch all feeds in parallel (failures handled gracefully) */
+        const results = await Promise.allSettled(
+            members.map(m =>
+                fetch(m.statsUrl)
+                    .then(r => r.ok ? r.json() : Promise.reject(new Error(r.status)))
+                    .then(data => ({ member: m, data }))
+            )
+        );
+
+        /* 3 ── Member name list for author highlighting (primary + all alt names) */
+        const memberNames = members.flatMap(m =>
+            [m.name, ...(m.altNames || [])].map(n => n.toLowerCase().trim())
+        );
+
+        /* 4 ── Merge publications; deduplicate by DOI (keep highest citation count) */
+        const seen = new Map();
+        let totalAllPapers = 0, totalAllCitations = 0;
+
+        results.forEach(r => {
+            if (r.status !== 'fulfilled') return;
+            const { data } = r.value;
+            if (data.stats) {
+                totalAllPapers    += data.stats.paperCount    || 0;
+                totalAllCitations += data.stats.citationCount || 0;
+            }
+            (data.publications || []).forEach(pub => {
+                const key = (pub.doiUrl || pub.doiValue || pub.title || '').toLowerCase().trim();
+                if (!seen.has(key)) {
+                    seen.set(key, { ...pub });
+                } else {
+                    const ex = seen.get(key);
+                    if ((pub.citationCount || 0) > (ex.citationCount || 0)) {
+                        seen.set(key, { ...pub });
+                    }
+                }
+            });
+        });
+
+        /* 5 ── Find most-recent year; keep only that year and the one before */
+        const all = Array.from(seen.values());
+        if (all.length === 0) throw new Error('No publications found');
+
+        const maxYear = Math.max(...all.map(p => parseInt(p.year) || 0));
+        const minYear = maxYear - 1;
+
+        const filtered = all
+            .filter(p => parseInt(p.year) >= minYear)
+            .sort((a, b) => {
+                const dy = parseInt(b.year) - parseInt(a.year);
+                return dy !== 0 ? dy : (b.citationCount || 0) - (a.citationCount || 0);
+            });
+
+        /* 6 ── Render stats bar */
+        statsEl.innerHTML = `
+            <div class="pub-stat">
+                <span class="pub-stat-value">${filtered.length}</span>
+                <span class="pub-stat-label">Papers (${minYear}–${maxYear})</span>
+            </div>
+            <div class="pub-stat">
+                <span class="pub-stat-value">${totalAllPapers.toLocaleString()}</span>
+                <span class="pub-stat-label">Total papers</span>
+            </div>
+            <div class="pub-stat">
+                <span class="pub-stat-value">${totalAllCitations.toLocaleString()}</span>
+                <span class="pub-stat-label">Total citations</span>
+            </div>`;
+
+        /* 7 ── Group by year */
+        const byYear = {};
+        filtered.forEach(p => { (byYear[p.year] = byYear[p.year] || []).push(p); });
+
+        /* 8 ── Render list */
+        container.innerHTML = Object.keys(byYear)
+            .sort((a, b) => parseInt(b) - parseInt(a))
+            .map(year => `
+                <div class="pub-year-group mt-md">
+                    <div class="pub-year">${year}</div>
+                    <ul class="pub-list">
+                        ${byYear[year].map(pub => {
+                            const authorsHtml = (pub.authors || []).map(a =>
+                                memberNames.some(n => a.toLowerCase().trim() === n)
+                                    ? `<span class="pub-author-self">${a}</span>`
+                                    : a
+                            ).join(', ');
+
+                            const titleHtml = pub.doiUrl
+                                ? `<a class="pub-title-link" href="${pub.doiUrl}" target="_blank" rel="noopener">${pub.title}</a>`
+                                : `<span class="pub-title-link">${pub.title}</span>`;
+
+                            const metaHtml = [
+                                pub.doiUrl
+                                    ? `<span class="pub-doi">DOI: ${pub.doiValue || pub.doiUrl}</span>`
+                                    : '',
+                                pub.citationCount
+                                    ? `<span class="pub-cite-count">${pub.citationCount} citation${pub.citationCount === 1 ? '' : 's'}</span>`
+                                    : ''
+                            ].filter(Boolean).join('');
+
+                            return `<li>
+                                ${titleHtml}
+                                <span class="pub-authors">${authorsHtml}</span>
+                                <span class="pub-venue">${pub.venue || ''}</span>
+                                ${metaHtml ? `<div class="pub-meta-row">${metaHtml}</div>` : ''}
+                            </li>`;
+                        }).join('')}
+                    </ul>
+                </div>`)
+            .join('');
+
+        if (filtered.length === 0) {
+            container.innerHTML = '<p class="pub-error">No recent publications found.</p>';
+        }
+
+    } catch (err) {
+        container.innerHTML = '<p class="pub-error">Publications could not be loaded. Please try again later.</p>';
+        console.error('[BioComplex] Publications load error:', err);
+    }
+})();
+</script>
+</body>
+</html>

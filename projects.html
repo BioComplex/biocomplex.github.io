@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects — BioComplex Lab</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+    <nav>
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="index.html"><img src="Images/logo.png" alt="BioComplex Lab"></a>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html"         class="nav-link">Home</a></li>
+                <li><a href="research.html"       class="nav-link">Research</a></li>
+                <li><a href="latest-news.html"    class="nav-link">Latest News</a></li>
+                <li><a href="collaborators.html"  class="nav-link">Collaborators</a></li>
+                <li><a href="projects.html"       class="nav-link active">Projects</a></li>
+                <li><a href="about-us.html"       class="nav-link">About Us</a></li>
+                <li><a href="join-the-lab.html"   class="nav-cta">Join the Lab</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<div class="page-header">
+    <div class="section-inner">
+        <h1>Our <em>Projects</em></h1>
+        <p>Current and recent funded research projects at the BioComplex Lab.</p>
+    </div>
+</div>
+
+<!-- ── ACTIVE PROJECTS ── -->
+<section class="section section-tint">
+    <div class="section-inner fade-in">
+        <span class="section-label">Active Projects</span>
+        <h2 class="section-heading">What we're <em>working on now</em></h2>
+
+        <div class="project-grid mt-md">
+            <div class="project-card">
+                <span class="project-status">Active · 2023–2026</span>
+                <h3>Project Title Placeholder</h3>
+                <p>
+                    Description of this project — its aims, methods, and expected outcomes.
+                    Replace this with the actual project abstract or a short lay summary.
+                    Include funding body and grant number if appropriate.
+                </p>
+                <div class="project-team">
+                    <strong>Team:</strong> PI Name, Collaborator Name(s)
+                </div>
+            </div>
+            <div class="project-card">
+                <span class="project-status">Active · 2024–2027</span>
+                <h3>Project Title Placeholder</h3>
+                <p>
+                    Description of this project — its aims, methods, and expected outcomes.
+                    Replace this with the actual project abstract or a short lay summary.
+                    Include funding body and grant number if appropriate.
+                </p>
+                <div class="project-team">
+                    <strong>Team:</strong> PI Name, Collaborator Name(s)
+                </div>
+            </div>
+            <div class="project-card">
+                <span class="project-status">Active · 2022–2025</span>
+                <h3>Project Title Placeholder</h3>
+                <p>
+                    Description of this project — its aims, methods, and expected outcomes.
+                    Replace this with the actual project abstract or a short lay summary.
+                    Include funding body and grant number if appropriate.
+                </p>
+                <div class="project-team">
+                    <strong>Team:</strong> PI Name, Collaborator Name(s)
+                </div>
+            </div>
+            <div class="project-card">
+                <span class="project-status">Active · 2024–2026</span>
+                <h3>Project Title Placeholder</h3>
+                <p>
+                    Description of this project — its aims, methods, and expected outcomes.
+                    Replace this with the actual project abstract or a short lay summary.
+                    Include funding body and grant number if appropriate.
+                </p>
+                <div class="project-team">
+                    <strong>Team:</strong> PI Name, Collaborator Name(s)
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── PAST PROJECTS ── -->
+<section class="section section-white">
+    <div class="section-inner fade-in">
+        <span class="section-label">Past Projects</span>
+        <h2 class="section-heading">Completed <em>work</em></h2>
+
+        <div class="project-grid mt-md">
+            <div class="project-card" style="border-color: var(--pink-light);">
+                <span class="project-status" style="color:var(--gray);">Completed · 2020–2023</span>
+                <h3>Project Title Placeholder</h3>
+                <p>
+                    Brief description of this completed project and its main outcomes or outputs.
+                    Link to relevant publications if available.
+                </p>
+                <div class="project-team">
+                    <strong>Team:</strong> PI Name, Collaborator Name(s)
+                </div>
+            </div>
+            <div class="project-card" style="border-color: var(--pink-light);">
+                <span class="project-status" style="color:var(--gray);">Completed · 2019–2022</span>
+                <h3>Project Title Placeholder</h3>
+                <p>
+                    Brief description of this completed project and its main outcomes or outputs.
+                    Link to relevant publications if available.
+                </p>
+                <div class="project-team">
+                    <strong>Team:</strong> PI Name, Collaborator Name(s)
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <img src="Images/logo.png" alt="BioComplex Lab">
+    <span>© 2026 BioComplex Lab, University of Exeter</span>
+    <div class="footer-social">
+        <a href="#" aria-label="LinkedIn"><img src="Images/icons/square-linkedin-brands-solid.png" alt="LinkedIn"></a>
+        <a href="#" aria-label="BlueSky"><img src="Images/icons/square-bluesky-brands-solid.png" alt="BlueSky"></a>
+    </div>
+</footer>
+
+<script>
+    const toggle = document.querySelector('.nav-toggle');
+    const menu   = document.querySelector('.nav-menu');
+    toggle.addEventListener('click', () => {
+        const open = menu.classList.toggle('nav-open');
+        toggle.setAttribute('aria-expanded', open);
+    });
+    const observer = new IntersectionObserver(
+        entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
+        { threshold: 0.08 }
+    );
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

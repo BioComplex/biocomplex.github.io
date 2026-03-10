@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collaborators — BioComplex Lab</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+    <nav>
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="index.html"><img src="Images/logo.png" alt="BioComplex Lab"></a>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html"         class="nav-link">Home</a></li>
+                <li><a href="research.html"       class="nav-link">Research</a></li>
+                <li><a href="latest-news.html"    class="nav-link">Latest News</a></li>
+                <li><a href="collaborators.html"  class="nav-link active">Collaborators</a></li>
+                <li><a href="projects.html"       class="nav-link">Projects</a></li>
+                <li><a href="about-us.html"       class="nav-link">About Us</a></li>
+                <li><a href="join-the-lab.html"   class="nav-cta">Join the Lab</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<div class="page-header">
+    <div class="section-inner">
+        <h1>Our <em>Collaborators</em></h1>
+        <p>Science advances through collaboration. Here are the researchers we work with.</p>
+    </div>
+</div>
+
+<section class="section section-tint">
+    <div class="section-inner fade-in">
+
+        <span class="section-label">Academic Collaborators</span>
+        <h2 class="section-heading">A global <em>network</em> of partners</h2>
+
+        <span class="collab-group-heading">Institution / Region Placeholder</span>
+        <div class="collab-grid">
+            <div class="collab-item">
+                <a href="#" class="collab-name">Name Placeholder</a>
+                <span class="collab-affil">Department, Institution</span>
+                <span class="collab-topic">Research topic placeholder</span>
+            </div>
+            <div class="collab-item">
+                <a href="#" class="collab-name">Name Placeholder</a>
+                <span class="collab-affil">Department, Institution</span>
+                <span class="collab-topic">Research topic placeholder</span>
+            </div>
+            <div class="collab-item">
+                <a href="#" class="collab-name">Name Placeholder</a>
+                <span class="collab-affil">Department, Institution</span>
+                <span class="collab-topic">Research topic placeholder</span>
+            </div>
+            <div class="collab-item">
+                <a href="#" class="collab-name">Name Placeholder</a>
+                <span class="collab-affil">Department, Institution</span>
+                <span class="collab-topic">Research topic placeholder</span>
+            </div>
+            <div class="collab-item">
+                <a href="#" class="collab-name">Name Placeholder</a>
+                <span class="collab-affil">Department, Institution</span>
+                <span class="collab-topic">Research topic placeholder</span>
+            </div>
+            <div class="collab-item">
+                <a href="#" class="collab-name">Name Placeholder</a>
+                <span class="collab-affil">Department, Institution</span>
+                <span class="collab-topic">Research topic placeholder</span>
+            </div>
+        </div>
+
+        <span class="collab-group-heading">Institution / Region Placeholder</span>
+        <div class="collab-grid">
+            <div class="collab-item">
+                <a href="#" class="collab-name">Name Placeholder</a>
+                <span class="collab-affil">Department, Institution</span>
+                <span class="collab-topic">Research topic placeholder</span>
+            </div>
+            <div class="collab-item">
+                <a href="#" class="collab-name">Name Placeholder</a>
+                <span class="collab-affil">Department, Institution</span>
+                <span class="collab-topic">Research topic placeholder</span>
+            </div>
+            <div class="collab-item">
+                <a href="#" class="collab-name">Name Placeholder</a>
+                <span class="collab-affil">Department, Institution</span>
+                <span class="collab-topic">Research topic placeholder</span>
+            </div>
+            <div class="collab-item">
+                <a href="#" class="collab-name">Name Placeholder</a>
+                <span class="collab-affil">Department, Institution</span>
+                <span class="collab-topic">Research topic placeholder</span>
+            </div>
+        </div>
+
+        <span class="collab-group-heading">Institution / Region Placeholder</span>
+        <div class="collab-grid">
+            <div class="collab-item">
+                <a href="#" class="collab-name">Name Placeholder</a>
+                <span class="collab-affil">Department, Institution</span>
+                <span class="collab-topic">Research topic placeholder</span>
+            </div>
+            <div class="collab-item">
+                <a href="#" class="collab-name">Name Placeholder</a>
+                <span class="collab-affil">Department, Institution</span>
+                <span class="collab-topic">Research topic placeholder</span>
+            </div>
+            <div class="collab-item">
+                <a href="#" class="collab-name">Name Placeholder</a>
+                <span class="collab-affil">Department, Institution</span>
+                <span class="collab-topic">Research topic placeholder</span>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <img src="Images/logo.png" alt="BioComplex Lab">
+    <span>© 2026 BioComplex Lab, University of Exeter</span>
+    <div class="footer-social">
+        <a href="#" aria-label="LinkedIn"><img src="Images/icons/square-linkedin-brands-solid.png" alt="LinkedIn"></a>
+        <a href="#" aria-label="BlueSky"><img src="Images/icons/square-bluesky-brands-solid.png" alt="BlueSky"></a>
+    </div>
+</footer>
+
+<script>
+    const toggle = document.querySelector('.nav-toggle');
+    const menu   = document.querySelector('.nav-menu');
+    toggle.addEventListener('click', () => {
+        const open = menu.classList.toggle('nav-open');
+        toggle.setAttribute('aria-expanded', open);
+    });
+    const observer = new IntersectionObserver(
+        entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
+        { threshold: 0.08 }
+    );
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

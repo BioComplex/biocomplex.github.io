@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioComplex Lab</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<header class="site-header">
+    <nav>
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="index.html"><img src="Images/logo.png" alt="BioComplex Lab"></a>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html"       class="nav-link active">Home</a></li>
+                <li><a href="research.html"    class="nav-link">Research</a></li>
+                <li><a href="latest-news.html"   class="nav-link">Latest News</a></li>
+                <li><a href="collaborators.html" class="nav-link">Collaborators</a></li>
+                <li><a href="projects.html"      class="nav-link">Projects</a></li>
+                <li><a href="about-us.html"      class="nav-link">About Us</a></li>
+                <li><a href="join-the-lab.html" class="nav-cta">Join the Lab</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<!-- ── HERO ── -->
+<section class="hero">
+    <div class="hero-inner">
+        <div class="hero-text fade-in">
+            <h1>Decoding the <em>world's complexity</em> with <em>data</em> and <em>network science.</em></h1>
+            <p class="hero-desc">
+                We study complex systems using approaches grounded in network science,
+                information theory, biologically inspired computing, and computational modelling.
+            </p>
+            <a href="research.html" class="btn-cta">Our Research</a>
+            <a href="about-us.html" class="btn-outline">Meet the Team</a>
+        </div>
+        <div class="hero-visual fade-in">
+            <div class="hero-blob">
+                <!-- Decorative biological network -->
+                <svg class="network-svg" viewBox="0 0 360 360" xmlns="http://www.w3.org/2000/svg">
+                    <g stroke="#d53367" stroke-width="1.2" opacity="0.35" fill="none">
+                        <line x1="180" y1="180" x2="110" y2="110"/>
+                        <line x1="180" y1="180" x2="255" y2="128"/>
+                        <line x1="180" y1="180" x2="268" y2="245"/>
+                        <line x1="180" y1="180" x2="108" y2="258"/>
+                        <line x1="180" y1="180" x2="196" y2="72"/>
+                        <line x1="180" y1="180" x2="148" y2="240"/>
+                        <line x1="110" y1="110" x2="52"  y2="78"/>
+                        <line x1="110" y1="110" x2="72"  y2="168"/>
+                        <line x1="110" y1="110" x2="162" y2="52"/>
+                        <line x1="255" y1="128" x2="308" y2="78"/>
+                        <line x1="255" y1="128" x2="308" y2="178"/>
+                        <line x1="255" y1="128" x2="196" y2="72"/>
+                        <line x1="268" y1="245" x2="308" y2="300"/>
+                        <line x1="268" y1="245" x2="210" y2="298"/>
+                        <line x1="108" y1="258" x2="58"  y2="292"/>
+                        <line x1="108" y1="258" x2="68"  y2="204"/>
+                        <line x1="148" y1="240" x2="108" y2="258"/>
+                        <line x1="148" y1="240" x2="210" y2="298"/>
+                    </g>
+                    <g fill="#d53367">
+                        <circle cx="180" cy="180" r="11" opacity="0.9"/>
+                        <circle cx="110" cy="110" r="8"  opacity="0.8"/>
+                        <circle cx="255" cy="128" r="8"  opacity="0.8"/>
+                        <circle cx="268" cy="245" r="8"  opacity="0.8"/>
+                        <circle cx="108" cy="258" r="8"  opacity="0.8"/>
+                        <circle cx="196" cy="72"  r="6"  opacity="0.7"/>
+                        <circle cx="148" cy="240" r="6"  opacity="0.7"/>
+                        <circle cx="52"  cy="78"  r="4"  opacity="0.55"/>
+                        <circle cx="72"  cy="168" r="4"  opacity="0.55"/>
+                        <circle cx="162" cy="52"  r="4"  opacity="0.55"/>
+                        <circle cx="308" cy="78"  r="4"  opacity="0.55"/>
+                        <circle cx="308" cy="178" r="4"  opacity="0.55"/>
+                        <circle cx="308" cy="300" r="4"  opacity="0.55"/>
+                        <circle cx="210" cy="298" r="4"  opacity="0.55"/>
+                        <circle cx="58"  cy="292" r="4"  opacity="0.55"/>
+                        <circle cx="68"  cy="204" r="4"  opacity="0.55"/>
+                    </g>
+                </svg>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── MISSION STRIP ── -->
+<section class="section section-white">
+    <div class="section-inner centered fade-in">
+        <span class="section-label">Our Mission</span>
+        <h2 class="section-heading">Dedicated to understanding <em>society's hidden patterns</em></h2>
+        <p class="section-subtext">
+            The BioComplex Lab develops computational frameworks to help stakeholders understand
+            the complexity that arises in many aspects of society: from city structure to human
+            mobility, from crime structure to patterns of misinformation. We believe that understanding
+            these hidden patterns is key to understanding their function and the cause-and-effect
+            mechanisms linked to them.
+        </p>
+        <a href="research.html" class="btn-cta">Learn More About Our Work</a>
+    </div>
+</section>
+
+<!-- ── RESEARCH THEMES ── -->
+<section class="section section-tint">
+    <div class="section-inner fade-in">
+        <span class="section-label">Research Themes</span>
+        <h2 class="section-heading">Questions that <em>drive</em> us</h2>
+        <div class="research-cards">
+            <div class="research-card">
+                <div class="research-card-icon"><img src="Images/icons/hexagon-nodes-solid.png" alt="Network Science icon"></div>
+                <h3>Network Science</h3>
+                <p>Understanding how structure shapes the dynamics and function of complex systems.</p>
+                <a href="research.html" class="card-link">Explore →</a>
+            </div>
+            <div class="research-card">
+                <div class="research-card-icon"><img src="Images/icons/code-compare-solid.png" alt="Computational Modelling icon"></div>
+                <h3>Computational Modelling</h3>
+                <p>Building descriptive and predictive models of complex systems, from crime to misinformation to inequality in urban environments.</p>
+                <a href="research.html" class="card-link">Explore →</a>
+            </div>
+            <div class="research-card">
+                <div class="research-card-icon"><img src="Images/icons/chart-line-solid.png" alt="Data-Driven Discovery icon"></div>
+                <h3>Data-Driven Discovery</h3>
+                <p>Exploring large-scale datasets with AI to highlight hidden patterns and emergent properties of complex systems, aiding data-informed decisions.</p>
+                <a href="research.html" class="card-link">Explore →</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── ABOUT SNIPPET ── -->
+<section class="section section-white">
+    <div class="section-inner fade-in">
+        <div class="two-col">
+            <div>
+                <span class="section-label">About the Lab</span>
+                <h2 class="section-heading">An <em>interdisciplinary</em> team tackling big questions</h2>
+                <p class="section-subtext">
+                    We bring together researchers from computer science, data science, mathematics, physics,
+                    and social science united by a shared curiosity about complexity. Our work is
+                    collaborative, open, and driven by a commitment to rigorous science.
+                </p>
+                <a href="about-us.html" class="btn-cta">About the Lab</a>
+            </div>
+            <div class="col-blob">Photo / Illustration</div>
+        </div>
+    </div>
+</section>
+
+<!-- ── LATEST NEWS ── -->
+<section class="section section-tint">
+    <div class="section-inner fade-in">
+        <span class="section-label">Latest News</span>
+        <h2 class="section-heading">What's happening <em>in the lab</em></h2>
+        <div class="news-grid">
+            <a href="latest-news.html" class="news-card">
+                <div class="news-card-img">Image placeholder</div>
+                <div class="news-card-body">
+                    <span class="news-tag">Publication</span>
+                    <h3>New paper: placeholder title published in [Journal Name]</h3>
+                    <p>Brief description of the paper's main findings and why they matter for the field.</p>
+                    <span class="news-date">Month 2025</span>
+                </div>
+            </a>
+            <a href="latest-news.html" class="news-card">
+                <div class="news-card-img">Image placeholder</div>
+                <div class="news-card-body">
+                    <span class="news-tag">Lab News</span>
+                    <h3>New team member joins the BioComplex Lab</h3>
+                    <p>We welcome [Name] who joins us as a [role]. Their research will focus on [topic].</p>
+                    <span class="news-date">Month 2025</span>
+                </div>
+            </a>
+        </div>
+        <div class="mt-md">
+            <a href="latest-news.html" class="btn-outline">All News</a>
+        </div>
+    </div>
+</section>
+
+<!-- ── JOIN CTA ── -->
+<section class="section section-dark cta-section">
+    <div class="section-inner">
+        <span class="section-label">Join Us</span>
+        <h2 class="section-heading">Interested in joining <em>our team?</em></h2>
+        <p class="section-subtext">
+            We are always looking for motivated researchers, from undergraduates to postdocs,
+            who are excited about complexity, networks, and the science of living systems.
+        </p>
+        <a href="join-the-lab.html" class="btn-cta">Join the Lab</a>
+    </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+    <img src="Images/logo.png" alt="BioComplex Lab">
+    <span>© 2026 BioComplex Lab, University of Exeter</span>
+    <div class="footer-social">
+        <a href="#" aria-label="LinkedIn"><img src="Images/icons/square-linkedin-brands-solid.png" alt="LinkedIn"></a>
+        <a href="#" aria-label="BlueSky"><img src="Images/icons/square-bluesky-brands-solid.png" alt="BlueSky"></a>
+    </div>
+</footer>
+
+<script>
+    // Mobile nav
+    const toggle = document.querySelector('.nav-toggle');
+    const menu   = document.querySelector('.nav-menu');
+    toggle.addEventListener('click', () => {
+        const open = menu.classList.toggle('nav-open');
+        toggle.setAttribute('aria-expanded', open);
+    });
+    // Fade-in
+    const observer = new IntersectionObserver(
+        entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
+        { threshold: 0.08 }
+    );
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

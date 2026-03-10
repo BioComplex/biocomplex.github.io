@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -c \":*)",
+      "WebFetch(domain:rpmenezes.github.io)",
+      "mcp__Claude_Preview__preview_start",
+      "WebFetch(domain:scholar.google.com)",
+      "WebFetch(domain:www.semanticscholar.org)",
+      "WebFetch(domain:emps.exeter.ac.uk)",
+      "WebFetch(domain:dblp.org)",
+      "WebFetch(domain:experts.exeter.ac.uk)",
+      "WebFetch(domain:www.researchgate.net)",
+      "WebFetch(domain:orcid.org)",
+      "WebFetch(domain:www.turing.ac.uk)",
+      "Bash(convert --version)",
+      "Bash(gs -dNOPAUSE -dBATCH -sDEVICE=png16m -r200 -sOutputFile=/Users/rmenezes/Documents/BioComplexLab/Site/Main/Images/about.png /Users/rmenezes/Documents/BioComplexLab/Site/Main/Images/about.pdf)",
+      "Bash(sips -g pixelWidth -g pixelHeight /Users/rmenezes/Documents/BioComplexLab/Site/Main/Images/about.png)",
+      "Bash(gh auth status)",
+      "Bash(git init)",
+      "Bash(git add .)",
+      "Bash(git commit -m \"Initial commit: BioComplex Lab website\")",
+      "Bash(git branch -M main)",
+      "Bash(git remote add origin https://github.com/BioComplex/biocomplex.github.io.git)",
+      "Bash(git push -u origin main)"
+    ]
+  }
+}
