@@ -3,6 +3,15 @@
     {
       "name": "Ronaldo Menezes",
       "altNames": ["R. Menezes", "Ronaldo P. Menezes", "R.P. Menezes"],
+      "position": "Professor",
+      "department": "Computer Science",
+      "institution": "University of Exeter",
+      "bio": "",
+      "photo": "",
+      "scholar": "https://scholar.google.com/citations?user=eHej2g8AAAAJ&hl=en",
+      "orcid": "https://orcid.org/0000-0002-6479-6429",
+      "emailUser": "r.menezes",
+      "emailDomain": "exeter.ac.uk",
       "statsUrl": "https://rpmenezes.github.io/data/auto/stats.json"
     }
   ]
