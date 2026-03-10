@@ -1,9 +1,23 @@
 {
   "members": [
     {
+      "name": "Hugo Barbosa",
+      "altNames": [],
+      "position": "Senior Lecturer",
+      "department": "Computer Science",
+      "institution": "University of Exeter",
+      "bio": "",
+      "photo": "",
+      "scholar": null,
+      "orcid": null,
+      "emailUser": null,
+      "emailDomain": null,
+      "statsUrl": null
+    },
+    {
       "name": "Ronaldo Menezes",
       "altNames": ["R. Menezes", "Ronaldo P. Menezes", "R.P. Menezes"],
-      "position": "Professor",
+      "position": "Professor of Data and Network Science",
       "department": "Computer Science",
       "institution": "University of Exeter",
       "bio": "",
@@ -13,6 +27,20 @@
       "emailUser": "r.menezes",
       "emailDomain": "exeter.ac.uk",
       "statsUrl": "https://rpmenezes.github.io/data/auto/stats.json"
+    },
+    {
+      "name": "Diogo Pacheco",
+      "altNames": [],
+      "position": "Senior Lecturer",
+      "department": "Computer Science",
+      "institution": "University of Exeter",
+      "bio": "",
+      "photo": "",
+      "scholar": null,
+      "orcid": null,
+      "emailUser": null,
+      "emailDomain": null,
+      "statsUrl": null
     }
   ]
 }
