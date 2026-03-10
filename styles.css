@@ -385,11 +385,17 @@ img { display: block; max-width: 100%; }
     margin-bottom: 1.25rem;
 }
 
-.research-card-icon img {
+.research-card-icon .icon-tint {
+    display: block;
     width: 42px;
     height: 42px;
-    display: block;
-    filter: invert(27%) sepia(80%) saturate(1800%) hue-rotate(315deg) brightness(90%) contrast(95%);
+    background-color: var(--pink);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    -webkit-mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    mask-position: center;
 }
 
 .research-card h3 {
