@@ -443,6 +443,8 @@ img { display: block; max-width: 100%; }
     aspect-ratio: 1;
     background: var(--pink-light);
     border-radius: 60% 40% 55% 45% / 50% 60% 40% 50%;
+    overflow: hidden;
+    box-shadow: 0 0 0 4px var(--pink);
     display: flex;
     align-items: center;
     justify-content: center;
